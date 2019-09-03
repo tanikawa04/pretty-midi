@@ -62,6 +62,8 @@ class PrettyMIDI(object):
                 # Otherwise, try passing it in as a file pointer
                 midi_data = mido.MidiFile(file=midi_file)
 
+            self.midi_data = midi_data
+
             # Convert tick values in midi_data to absolute, a useful thing.
             for track in midi_data.tracks:
                 tick = 0
